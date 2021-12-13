@@ -1,0 +1,38 @@
+{
+  "name": "railflow-orb-test",
+  "version": "1.0.0",
+  "description": "Repository to test railflow circleci orb",
+  "main": "index.js",
+  "scripts": {
+    "test": "RUN_ENV=test jest --ci --runInBand --detectOpenHandles --useStderr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redcom/railflow-orb-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redcom/railflow-orb-test/issues"
+  },
+  "homepage": "https://github.com/redcom/railflow-orb-test#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "jest": "^27.4.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "stub"
+    ],
+    "testRegex": "((\\.|/*.)(spec))\\.js?$",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverage": true,
+    "bail": true,
+    "maxConcurrency": 10,
+    "maxWorkers": 10
+  }
+}
